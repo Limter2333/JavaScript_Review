@@ -163,7 +163,7 @@ window.onload = function () {
     var imgArr = ["img/01.jpg", "img/02.jpg", "img/03.jpg"];
     var index = 0;
 
-    
+
     prev.onclick = function () {
         if (index == 0) {
             index = imgArr.length;
@@ -172,7 +172,7 @@ window.onload = function () {
         img.src = imgArr[index];
     };
     next.onclick = function () {
-        if (index == imgArr.length-1) {
+        if (index == imgArr.length - 1) {
             index = -1;
         }
         index++;

@@ -3,37 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!--    JS代码   -->
-    <script type="text/javascript">
-        // alert("hello world!");
-    </script>
-    <!--  引用JS  -->
-    <script src="js/demo.js"></script>
     <style type="text/css">
-        *{
-            margin: 0;
-            padding: 0;
-        }
 
-        #outer{
-            width: 500px;
-            height: 300px;
-            margin: 50px;
-            padding: 10px;
-            background-color: yellowgreen;
-            text-align: center;
-        }
     </style>
-</head>
+    <script>
+        // // 查找是什么浏览器，以应对不同浏览器的不同处理
+        // console.log(navigator);
+        // console.log(navigator.appName);
+        // console.log(navigator.userAgent);
+        //
+        // if(/firefox/.test(navigator.userAgent)){
+        //     console.log("it's firefox")
+        // }
+        // else if(/Chrome/.test(navigator.userAgent)){
+        //     console.log("it's Chrome")
+        // }else if(/MSIE/.test(navigator.userAgent)){
+        //     console.log("it's IE");
+        // }
+        //
+        // alert("ActiveXObject" in window);
+        //
 
+        // // console.log(history);
+        // // 共跳转了几个页面
+        // console.log(history.length);
+        // window.onload = function () {
+        //     var btn = document.getElementById("btn");
+        //     btn.onclick = function () {
+        //         // history.back();
+        //         // history.forward();
+        //         // go(1) 向前跳转1个页面
+        //         // go(-1) 向后跳转1个页面
+        //         history.go();
+        //     }
+        // }
+
+
+        // // console.log(location); location 封装了地址栏的信息
+        // window.onload = function () {
+        //     location = "demo.html";
+        // }
+
+        window.onload = function () {
+            var num = document.getElementById("num")
+            var count = 1;
+            var timer = setInterval(function (){
+                num.innerHTML = count++
+                if (count == 20){
+                    clearInterval(timer);
+                }
+            },1000);
+        }
+
+
+    </script>
+</head>
 <body>
-<!--    <button  id="btn">click me</button>-->
-<!--    <a href="javascript: ;">click me too</a>-->
-<div id="outer">
-    <img src="img/01.jpg"style="width: 400px"/>
-    <button id="pre">previous</button>
-    <button id="next">next</button>
-</div>s
+    <button id="btn">click me</button>
+    <h3 id="num"></h3>
 </body>
 </html>
-<!--111-->

@@ -27,10 +27,10 @@ window.onload = function () {
         var items = document.getElementsByName("items");
         for (var i = 0; i < items.length; i++) {
             items[i].checked = !items[i].checked;
-            if (items[items.length-1]){
+            if (items[items.length - 1]) {
                 checkedAllBox.checked = true;
             }
-            if(!items[i].checked){
+            if (!items[i].checked) {
                 checkedAllBox.checked = false;
             }
         }
@@ -60,11 +60,11 @@ window.onload = function () {
     var items = document.getElementsByName("items");
     for (var i = 0; i < items.length; i++) {
         items[i].onclick = function () {
-            for(var j=0; j<items.length; j++){
-                if (items[items.length-1]){
+            for (var j = 0; j < items.length; j++) {
+                if (items[items.length - 1]) {
                     checkedAllBox.checked = true;
                 }
-                if(!items[j].checked){
+                if (!items[j].checked) {
                     checkedAllBox.checked = false;
                     break;
                 }
