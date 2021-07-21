@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/picture_show2.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #outer {
+            width: 420px;
+            height: 300px;
+            margin: 50px auto;
+            background-color: yellowgreen;
+            padding: 10px 0;
+            position: relative;
+            /*overflow: hidden;*/
+        }
+
+        .imgCss {
+            width: 400px;
+            height: 300px;
+            margin: 0 10px;
+            float: left;
+        }
+
+        #imgList {
+            list-style: none;
+            /*width: 2600px;*/
+            position: absolute;
+            /*每移动一张图片向左偏移420*/
+            /*left: -420px;*/
+        }
+
+        #navDiv {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #navDiv a{
+            display: block;
+            float: left;
+
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+
+            background-color: red;
+            opacity: 0.5;
+
+
+
+        /*    filter: alpha(opacity=50); IE8透明*/
+        }
+    </style>
+</head>
+<body>
+<div id="outer">
+    <ul id="imgList">
+        <li><img src="img/01.jpg" class="imgCss"></li>
+        <li><img src="img/02.jpg" class="imgCss"></li>
+        <li><img src="img/03.jpg" class="imgCss"></li>
+        <li><img src="img/04.jpg" class="imgCss"></li>
+        <li><img src="img/05.jpg" class="imgCss"></li>
+        <li><img src="img/01.jpg" class="imgCss"></li>
+    </ul>
+    <!--   导航符号   -->
+    <div id="navDiv">
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+    </div>
+</div>
+
+</body>
+</html>
