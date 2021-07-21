@@ -47,19 +47,19 @@
         window.onload = function () {
             var num = document.getElementById("num")
             var count = 1;
-            var timer = setInterval(function (){
+            var timer = setInterval(function () {
                 num.innerHTML = count++
-                if (count == 20){
+                if (count == 20) {
                     clearInterval(timer);
                 }
-            },1000);
+            }, 1000);
         }
 
 
     </script>
 </head>
 <body>
-    <button id="btn">click me</button>
-    <h3 id="num"></h3>
+<button id="btn">click me</button>
+<h3 id="num"></h3>
 </body>
 </html>

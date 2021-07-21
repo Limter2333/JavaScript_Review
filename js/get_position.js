@@ -1,8 +1,8 @@
-window.onload = function (){
+window.onload = function () {
     var areaDiv = document.getElementById("areaDiv");
     var showMsg = document.getElementById("showMsg");
 
-    areaDiv.onmousemove = function (event){
+    areaDiv.onmousemove = function (event) {
         var x = event.clientX;
         var y = event.clientY;
 
@@ -10,7 +10,7 @@ window.onload = function (){
     }
 
     var box1 = document.getElementById("box1");
-    document.onmousemove = function (event){
+    document.onmousemove = function (event) {
         var left = event.clientX;
         var top = event.clientY;
 
@@ -26,7 +26,7 @@ window.onload = function (){
     }
 
     var box2 = document.getElementById("box2");
-    box2.onmousemove = function (event){
+    box2.onmousemove = function (event) {
         event = event || window.event;
         event.cancelBubble = true;
     };

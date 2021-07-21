@@ -30,10 +30,10 @@
 //         return obj.currentStyle[name];
 //     }
 // }
-window.onload = function (){
+window.onload = function () {
     var btn01 = document.getElementById("btn01");
     var box1 = document.getElementById("box1")
-    btn01.onclick = function (){
+    btn01.onclick = function () {
         // 可见宽度
         alert(box1.clientWidth);
     };

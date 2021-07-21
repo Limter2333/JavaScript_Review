@@ -37,7 +37,7 @@ window.onload = function () {
         city.appendChild(li);
     });
 
-    myClick("btn02", function (){
+    myClick("btn02", function () {
         var li = document.createElement("li");
         var gzText = document.createTextNode("广州");
         li.appendChild(gzText);
@@ -48,14 +48,14 @@ window.onload = function () {
 
 
     // 删
-    myClick("btn04", function (){
+    myClick("btn04", function () {
         var bj = document.getElementById("bj");
         var city = document.getElementById("city");
         city.removeChild(bj);
     });
 
     // 改
-    myClick("btn03", function (){
+    myClick("btn03", function () {
         var li = document.createElement("li");
         var gzText = document.createTextNode("广州");
         li.appendChild(gzText);
@@ -66,16 +66,16 @@ window.onload = function () {
         bj.parentNode.removeChild(bj);
     });
 
-    myClick("btn05", function (){
+    myClick("btn05", function () {
         var bj = document.getElementById("city");
         console.log(bj.innerHTML);
     });
 
-    myCLick("btn06", function (){
+    myCLick("btn06", function () {
 
     });
 
-    function myClick(idStr, fun){
+    function myClick(idStr, fun) {
         var btn = document.getElementById(idStr);
         btn.onclick = fun;
     }

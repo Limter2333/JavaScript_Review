@@ -31,37 +31,37 @@ function toggleClass(obj, cn) {
 }
 
 // class元素
-function getStyle(obj, name){
-    if(window.getComputedStyle){
+function getStyle(obj, name) {
+    if (window.getComputedStyle) {
         return getComputedStyle(obj, null)[name];
-    }else{
+    } else {
         return getComputedStyle[name];
     }
 }
 
 // div移动动画
-function move(obj, attr, target, speed, callback){
+function move(obj, attr, target, speed, callback) {
     clearInterval(obj.timer);
 
     var current = parseInt(getStyle(obj, attr));
 
-    if (current > target){
+    if (current > target) {
         speed = -speed;
     }
 
     // console.log(obj, target, speed);
 
-    obj.timer = setInterval(function (){
+    obj.timer = setInterval(function () {
 
         var oldValue = parseInt(getStyle(obj, attr));
         var newValue = oldValue + speed;
-        if((speed < 0 && newValue < target) || (speed > 0 && newValue > target)){
+        if ((speed < 0 && newValue < target) || (speed > 0 && newValue > target)) {
             newValue = target;
         }
         obj.style[attr] = newValue + "px";
-        if(newValue == target){
+        if (newValue == target) {
             clearInterval(obj.timer);
             callback && callback();
         }
-    },30);
+    }, 30);
 }

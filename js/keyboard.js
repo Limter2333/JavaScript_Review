@@ -31,10 +31,10 @@ window.onload = function () {
         event = event || window.event;
         // console.log(event.key);
         var speed = 20;
-        if (event.ctrlKey){
+        if (event.ctrlKey) {
             speed = 50;
         }
-        switch(event.key){
+        switch (event.key) {
             case "ArrowLeft":
                 div1.style.left = div1.offsetLeft - speed + "px";
                 break;
