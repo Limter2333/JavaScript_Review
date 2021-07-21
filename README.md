@@ -1,2 +1,2 @@
 # JavaScript_Review
-JS code demo
+JS project Demos
